@@ -1,5 +1,8 @@
 import { Nav, NavLink } from "@/components/Nav";
 
+export const dynamic = "force-dynamic";
+// force next to not cache any of the admin pages since we want most up to date
+
 export default function AdminLayout({
   children,
 }: Readonly<{
@@ -13,7 +16,7 @@ export default function AdminLayout({
         <NavLink href="/admin/customers">Customers</NavLink>
         <NavLink href="/admin/orders">Sales</NavLink>
       </Nav>
-      <div className="container my-6">{children}</div>
+      <div className="container m-6">{children}</div>
     </>
   );
 }
